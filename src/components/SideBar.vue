@@ -1,35 +1,26 @@
 <template>
     <div class="position-fixed h-100 bg-light text-center w-60 px-0">
-        <router-link
-            class="navbar-brand mt-2 mx-0"
-            to="/"
-            v-b-popover.hover.right="'I am popover directive content!'"
-        >
-            <img src="../assets/logo.png" class width="36" alt />
+        <router-link class="navbar-brand mt-2 mx-0" to="/">
+            <img src="../assets/logo.png" width="36" alt />
         </router-link>
 
         <div class="text-center mt-3">
-            <nav class="nav flex-column">
-                <li
-                    class="nav-item"
+            <b-nav vertical>
+                <b-nav-item
                     v-for="(item, i) in routes"
                     :key="i"
+                    :to="`${item.pathname}`"
+                    :class="[
+                        item.active ? 'active' : '',
+                        item.divider ? 'mb-3' : ''
+                    ]"
+                    :disabled="item.disabled"
                     @click="setActive(item.pathname)"
+                    v-b-tooltip.hover.right="item.name"
                 >
-                    <router-link
-                        class="nav-link"
-                        :to="`${item.pathname}`"
-                        :class="item.active ? 'active' : ''"
-                        v-b-popover.hover.right="item.name"
-                    >
-                        <b-icon :icon="`${item.icon}`" class=""></b-icon>
-                    </router-link>
-                    <div
-                        class="dropdown-divider mx-2 my-3"
-                        v-if="item.divider"
-                    ></div>
-                </li>
-            </nav>
+                    <b-icon :icon="`${item.icon}`" class></b-icon>
+                </b-nav-item>
+            </b-nav>
         </div>
     </div>
 </template>
@@ -64,49 +55,56 @@ export default {
                     name: "dashboard",
                     icon: "house",
                     active: false,
-                    divider: false
+                    divider: false,
+                    disabled: false
                 },
                 {
                     pathname: "/pages",
                     name: "pages",
                     icon: "file-earmark",
                     active: false,
-                    divider: false
+                    divider: false,
+                    disabled: true
                 },
                 {
                     pathname: "/grids",
                     name: "grid",
                     icon: "grid",
                     active: false,
-                    divider: false
+                    divider: false,
+                    disabled: true
                 },
                 {
                     pathname: "/characters",
                     name: "characters",
                     icon: "person",
                     active: false,
-                    divider: true
+                    divider: true,
+                    disabled: false
                 },
                 {
                     pathname: "/clipboards",
                     name: "clipboard",
                     icon: "clipboard",
                     active: false,
-                    divider: false
+                    divider: false,
+                    disabled: true
                 },
                 {
                     pathname: "/bookmarks",
                     name: "bookmark",
                     icon: "bookmark",
                     active: false,
-                    divider: false
+                    divider: false,
+                    disabled: true
                 },
                 {
                     pathname: "/books",
                     name: "book",
                     icon: "book",
                     active: false,
-                    divider: false
+                    divider: false,
+                    disabled: true
                 }
             ]
         };
