@@ -1,6 +1,11 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" type="light" variant="light">
+        <b-navbar
+            toggleable="lg"
+            type="light"
+            variant="light"
+            class="border-bottom"
+        >
             <div class="container-fluid">
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
