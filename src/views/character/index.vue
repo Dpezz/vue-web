@@ -16,13 +16,15 @@
                     </div>
                     <div class="col-auto">
                         <!-- Button -->
-                        <a href="#!" class="btn btn-outline-primary lift">
+                        <a href="#" class="btn btn-success lift">
+                            <b-icon
+                                icon="plus-circle"
+                                class="align-text-top"
+                            ></b-icon>
                             New
-                            <b-icon icon="plus"></b-icon>
                         </a>
                     </div>
                 </div>
-                <!-- / .row -->
             </div>
         </div>
 
