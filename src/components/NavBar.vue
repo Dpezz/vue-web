@@ -10,6 +10,17 @@
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
                 <b-collapse id="nav-collapse" is-nav>
+                    <b-nav-form>
+                        <b-input-group>
+                            <b-input-group-prepend is-text>
+                                <b-icon icon="search"></b-icon>
+                            </b-input-group-prepend>
+                            <b-form-input
+                                type="search"
+                                placeholder="Search terms"
+                            ></b-form-input>
+                        </b-input-group>
+                    </b-nav-form>
                     <!-- Right aligned nav items -->
                     <b-navbar-nav class="ml-auto">
                         <b-nav-item-dropdown right>
