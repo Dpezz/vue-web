@@ -1,5 +1,7 @@
 <template>
-    <div class="position-fixed h-100 bg-light text-center w-60 px-0">
+    <div
+        class="position-fixed h-100 bg-light border-right text-center w-60 px-0"
+    >
         <router-link class="navbar-brand mt-2 mx-0" to="/">
             <img src="../assets/logo.png" width="36" alt />
         </router-link>
@@ -41,6 +43,10 @@
 .active {
     border-left: 2px solid #41b883;
     color: #41b883;
+}
+
+.nav-link.disabled {
+    color: #ccc !important;
 }
 </style>
 
