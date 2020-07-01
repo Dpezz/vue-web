@@ -8,7 +8,7 @@
                         <h6 class="header-pretitle">
                             <router-link to="/characters">
                                 <b-icon icon="arrow-left"></b-icon>
-                                return
+                                back
                             </router-link>
                         </h6>
 
