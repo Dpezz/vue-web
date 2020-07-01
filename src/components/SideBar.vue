@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="position-fixed h-100 bg-light border-right text-center w-60 px-0"
-    >
+    <div class="position-fixed h-100 bg-vue border-right text-center w-60 px-0">
         <router-link class="navbar-brand mt-2 mx-0" to="/">
             <img src="../assets/logo.png" width="36" alt />
         </router-link>
@@ -28,25 +26,30 @@
 </template>
 
 <style lang="scss">
+$primary: #ccc;
+$secondary: #42b983;
+$third: #35495d;
+
+.bg-vue {
+    background-color: $third;
+}
 .w-60 {
     max-width: 65px;
     min-width: 65px;
 }
 .nav-link {
-    color: #2d3e50;
+    color: $primary;
 }
 
 .nav-link:hover {
-    color: #42b983 !important;
+    color: $secondary !important;
 }
 
 .active {
-    border-left: 2px solid #41b883;
-    color: #41b883;
+    border-left: 2px solid $secondary;
 }
-
-.nav-link.disabled {
-    color: #ccc !important;
+.active .router-link-active {
+    color: $secondary;
 }
 </style>
 
