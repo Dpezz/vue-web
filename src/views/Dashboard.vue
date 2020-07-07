@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// dashboard new
+// dashboard new 1
 export default {
     name: "Dashboard"
 };
