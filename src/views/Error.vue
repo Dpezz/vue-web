@@ -9,7 +9,7 @@
 </template>
 
 <script>
-// error new 1
+// error new 2
 export default {
     name: "Error"
 };
